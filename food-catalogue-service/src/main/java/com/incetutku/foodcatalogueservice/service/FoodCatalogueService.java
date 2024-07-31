@@ -1,5 +1,6 @@
 package com.incetutku.foodcatalogueservice.service;
 
+import com.incetutku.foodcatalogueservice.dto.FoodCataloguePage;
 import com.incetutku.foodcatalogueservice.dto.FoodItemDTO;
 import com.incetutku.foodcatalogueservice.entity.FoodItem;
 import com.incetutku.foodcatalogueservice.mapper.FoodItemMapper;
@@ -17,5 +18,12 @@ public class FoodCatalogueService {
     public FoodItemDTO createFoodItem(FoodItemDTO foodItemDTO) {
         FoodItem savedFoodItem = foodItemRepository.save(FoodItemMapper.INSTANCE.mapFoodItemDTOToFoodItem(foodItemDTO));
         return FoodItemMapper.INSTANCE.mapFoodItemToFoodItemDTO(savedFoodItem);
+    }
+
+    public FoodCataloguePage getFoodCataloguePageDetails(Integer restaurantId) {
+        // Food Item List
+        // Restaurant Details
+        // TODO
+        return null;
     }
 }
