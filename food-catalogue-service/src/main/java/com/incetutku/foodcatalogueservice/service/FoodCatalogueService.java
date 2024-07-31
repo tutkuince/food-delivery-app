@@ -1,5 +1,8 @@
 package com.incetutku.foodcatalogueservice.service;
 
+import com.incetutku.foodcatalogueservice.dto.FoodItemDTO;
+import com.incetutku.foodcatalogueservice.entity.FoodItem;
+import com.incetutku.foodcatalogueservice.mapper.FoodItemMapper;
 import com.incetutku.foodcatalogueservice.repository.FoodItemRepository;
 import org.springframework.stereotype.Service;
 
@@ -9,5 +12,10 @@ public class FoodCatalogueService {
 
     public FoodCatalogueService(FoodItemRepository foodItemRepository) {
         this.foodItemRepository = foodItemRepository;
+    }
+
+    public FoodItemDTO createFoodItem(FoodItemDTO foodItemDTO) {
+        FoodItem savedFoodItem = foodItemRepository.save(FoodItemMapper.INSTANCE.mapFoodItemDTOToFoodItem(foodItemDTO));
+        return FoodItemMapper.INSTANCE.mapFoodItemToFoodItemDTO(savedFoodItem);
     }
 }
