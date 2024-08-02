@@ -9,6 +9,9 @@ import { HeaderComponent } from './components/header.component';
   declarations: [
     HeaderComponent
   ],
+  exports: [
+    HeaderComponent
+  ],
   imports: [
     CommonModule,
     HeaderRoutingModule
