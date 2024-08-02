@@ -15,12 +15,10 @@ import java.util.UUID;
 public class OrderService {
 
     private final OrderRepository orderRepository;
-    private SequenceGenerator sequenceGenerator;
     private final RestTemplate restTemplate;
 
-    public OrderService(OrderRepository orderRepository, SequenceGenerator sequenceGenerator, RestTemplate restTemplate) {
+    public OrderService(OrderRepository orderRepository, RestTemplate restTemplate) {
         this.orderRepository = orderRepository;
-        this.sequenceGenerator = sequenceGenerator;
         this.restTemplate = restTemplate;
     }
 
