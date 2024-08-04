@@ -1,22 +1,22 @@
-import {Component} from '@angular/core';
-import {RestaurantService} from "../service/restaurant.service";
-import {Router} from "@angular/router";
-import {Restaurant} from "../../shared/models/Restaurant";
+import { Component } from '@angular/core';
+import { Restaurant } from 'src/app/Shared/models/Restaurant';
+import { RestaurantService } from '../service/restaurant.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-restaurant-listing',
   templateUrl: './restaurant-listing.component.html',
-  styleUrl: './restaurant-listing.component.css'
+  styleUrls: ['./restaurant-listing.component.css']
 })
 export class RestaurantListingComponent {
+
   public restaurantList: Restaurant[];
 
   ngOnInit() {
     this.getAllRestaurants();
   }
 
-  constructor(private router: Router, private restaurantService: RestaurantService) {
-  }
+  constructor(private router: Router, private restaurantService: RestaurantService) { }
 
   getAllRestaurants() {
     this.restaurantService.getAllRestaurants().subscribe(
@@ -25,7 +25,6 @@ export class RestaurantListingComponent {
       }
     )
   }
-
   getRandomNumber(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
@@ -37,7 +36,9 @@ export class RestaurantListingComponent {
     return `${randomIndex}.jpg`; // Replace with your image filename pattern
   }
 
-  onButtonClick(id: number | undefined) {
+  onButtonClick(id: number) {
     this.router.navigate(['/food-catalogue', id]);
   }
+
+
 }
