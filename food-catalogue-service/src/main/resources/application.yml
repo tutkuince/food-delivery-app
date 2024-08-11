@@ -8,6 +8,9 @@ spring:
     name: FOOD-CATALOGUE-SERVICE
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${AWS_MYSQL_URL}
+    username: ${AWS_MYSQL_USERNAME}
+    password: ${AWS_MYSQL_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
