@@ -3,9 +3,11 @@ server:
 
 spring:
   profiles:
-    active: dev
+    active: default
   application:
     name: RESTAURANT-SERVICE
+  config:
+    import: optional:file:src/main/resources/.env[.properties]
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: ${AWS_MYSQL_URL}

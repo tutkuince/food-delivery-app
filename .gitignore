@@ -1,3 +1,6 @@
 user-service/.env
 food-catalogue-service/.env
 restaurant-listing/.env
+food-catalogue-service/src/main/resources/.env
+restaurant-listing/src/main/resources/.env
+user-service/src/main/resources/.env
