@@ -8,7 +8,7 @@ spring:
     name: USER-SERVICE
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: mysql-db-instance.cl62gquswkce.eu-central-1.rds.amazonaws.com:3306/userdb
+    url: ${AWS_MYSQL_URL}
     username: ${AWS_MYSQL_USERNAME}
     password: ${AWS_MYSQL_PASSWORD}
   jpa:
