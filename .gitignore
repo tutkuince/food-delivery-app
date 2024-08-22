@@ -4,3 +4,5 @@ restaurant-listing/.env
 food-catalogue-service/src/main/resources/.env
 restaurant-listing/src/main/resources/.env
 user-service/src/main/resources/.env
+deployment/aws/configmap.yml
+deployment/aws/secret.yml
