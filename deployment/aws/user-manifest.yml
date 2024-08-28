@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: userapp
-          image: tutkuince/user-service:0.0.2
+          image: tutkuince/user-service:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 9093
