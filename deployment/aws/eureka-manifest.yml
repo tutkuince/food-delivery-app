@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: eureka
-          image: tutkuince/eureka-service:0.0.1
+          image: tutkuince/eureka-service:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8761
