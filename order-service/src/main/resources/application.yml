@@ -8,8 +8,8 @@ spring:
     name: ORDER-SERVICE
   data:
     mongodb:
-      uri: mongodb://localhost:27017/orderdb
-      host: localhost
+      uri: mongodb+srv://admin:112358@atlas-cluster.idnnf.mongodb.net/?retryWrites=true&w=majority #mongodb://localhost:27017/orderdb
+      host: atlas-cluster.mqdj7js.mongodb.net #localhost
       port: 27017
       database: orderdb
       repositories:
